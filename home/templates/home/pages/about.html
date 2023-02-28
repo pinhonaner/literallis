@@ -6,13 +6,9 @@
 {% include 'home/partials/head.html'  %}
 
 <body>
-
     {% include 'home/partials/header.html' %}
 
-    {% if is_landing_page is True %}
-        {% include 'home/pages/landing.html' %}
-    {% endif %}
-
+    {% include 'home/partials/landing.html' %}
 </body>
 
 </html>
