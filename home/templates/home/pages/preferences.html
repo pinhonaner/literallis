@@ -7,24 +7,26 @@
 
 <body>
     {% include 'home/partials/header.html' %}
-<main>
-    <section>
-        <img class="preferences_marker" src='{% static "/home/img/marker.svg" %}' alt="">
-       
-        <h1> ESCOLHER PREFERÊNCIAS </h1>
 
-        <p>Suas preferências aparecerão com mais frequência no seu feed</p>
+    <!-- Esse é o conteúdo da página página preferências, após criação de conta. *PROVAVELMENTE VAI IR PARA UM APP DE AUTENTICAÇÃO. -->
+    <main>
+        <section>
+            <img class="preferences_marker" src='{% static "/home/img/marker.svg" %}' alt="">
+        
+            <h1> ESCOLHER PREFERÊNCIAS </h1>
 
-        {% for gender in genders %}
-        <div>
-            <h1>{{gender}}</h1>
-            <img src="imagem do livro aqui" alt="">
-        </div>
-        {% endfor %}
+            <p>Suas preferências aparecerão com mais frequência no seu feed</p>
 
-        <button>Continuar</button>
-    </section>    
-</main>
+            {% for gender in genders %}
+            <div>
+                <h1>{{gender}}</h1>
+                <img src="imagem do livro aqui" alt="">
+            </div>
+            {% endfor %}
+
+            <button>Continuar</button>
+        </section>    
+    </main>
     
 </body>
 
