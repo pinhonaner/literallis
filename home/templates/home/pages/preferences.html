@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<!-- Aqui faço a inclusao da partial da head -->
+{% include 'home/partials/head.html'  %}
+
+<body>
+    {% include 'home/partials/header.html' %}
+<main>
+    <section>
+        <img class="preferences_marker" src='{% static "/home/img/marker.svg" %}' alt="">
+       
+        <h1> ESCOLHER PREFERÊNCIAS </h1>
+
+        <p>Suas preferências aparecerão com mais frequência no seu feed</p>
+
+        {% for gender in genders %}
+        <div>
+            <h1>{{gender}}</h1>
+            <img src="imagem do livro aqui" alt="">
+        </div>
+        {% endfor %}
+
+        <button>Continuar</button>
+    </section>    
+</main>
+    
+</body>
+
+</html>

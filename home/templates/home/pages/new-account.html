@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<!-- Aqui faço a inclusao da partial da head -->
+{% include 'home/partials/head.html' %}
+
+<body>
+    {% include 'home/partials/header.html' %}
+    <main>
+        <section>
+            <img class="new_account_marker" src='{% static "/home/img/marker.svg" %}' alt="">
+            <img class="new_account_logotipo" src='{% static "/home/img/logotipo.svg" %}' alt="Logotipo da Literalis">
+
+            <div class="name">
+                <h2 class="name_title">Nome</h2>
+                <input class="name_input" type="text">
+            </div>
+            <div class="email">
+                <h2 class="email_title">Email</h2>
+                <input class="email_input" type="text">
+            </div>
+            <div class="create_password">
+                <h2 class="cpassword_title">Criar senha</h2>
+                <input class="cpassword_input" type="text">
+            </div>
+            <div class="repeat_password">
+                <h2 class="rpassword_title">Repetir senha</h2>
+                <input class="rpassword_input" type="text">
+            </div>
+
+            <button class="create_account_button">Criar conta</button>
+        </section>
+    </main>
+</body>
+
+</html>
