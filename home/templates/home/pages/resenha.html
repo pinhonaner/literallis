@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+{% include 'review/partials/head.html'  %}
+
+<body>
+    {% include 'review/partials/header.html' %}
+
+    <!-- Esse é o conteúdo da página 'resenha'. -->
+    
+    <img class="arrow_1" src='{% static "/home/img/arrow_1.svg" %}' alt="">
+    
+    <main> 
+        
+        <!-- na verdade acho que aqui vai ser alguma coisa da espécie {{book_image}}-->
+        <img src="imagem do livro aqui" alt="">
+        <!-- seção dedicada à avaliação do livro-->
+        <div>
+            <h1>{{book_title}}</h1>
+            <p>Autor: {{book_author}}</p>
+            <p>Ano: {{book_year}}</p>
+            <!-- sistema de avaliação preparado para o js-->
+            <div>
+                <a href="javascript:void(0)" onclick="Avaliar(1)">
+                <img src='{% static "/home/img/heart_1.svg" %}' id="h1"></a>
+                    
+                <a href="javascript:void(0)" onclick="Avaliar(1)">
+                <img src='{% static "/home/img/heart_1.svg" %}' id="h2"></a>
+                    
+                <a href="javascript:void(0)" onclick="Avaliar(1)">
+                <img src='{% static "/home/img/heart_1.svg" %}' id="h3"></a>
+                    
+                <a href="javascript:void(0)" onclick="Avaliar(1)">
+                <img src='{% static "/home/img/heart_1.svg" %}' id="h4"></a>
+                    
+                <a href="javascript:void(0)" onclick="Avaliar(1)">
+                <img src='{% static "/home/img/heart_1.svg" %}' id="h5"></a>
+                <p id="rating">0</p>
+            </div>
+        </div>
+        <!-- seção dedicada às citações-->
+        <div>
+            <h1>Adicione citações</h1>
+            <!-- lembrar de adicionar a biblioteca bootstrap para o seguinte código funcionar -->
+            <div class="col-lg-6">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Entre com a citação aqui...">
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">{{add}}</button>
+                  </span>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h1>Escreva sua resenha</h1>
+            <input type="">
+        </div>
+    </main>
+
+    {% include 'review/partials/footer.html' %}
+</body>
+
+</html>
