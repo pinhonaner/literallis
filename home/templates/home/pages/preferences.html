@@ -10,24 +10,21 @@
 
     <!-- Esse é o conteúdo da página página preferências, após criação de conta. *PROVAVELMENTE VAI IR PARA UM APP DE AUTENTICAÇÃO. -->
     <main>
-        <section>
-            <img class="preferences_marker" src='{% static "/home/img/marker.svg" %}' alt="">
+        <img class="preferences_marker" src='{% static "/home/img/marker.svg" %}' alt="">
         
-            <h1> ESCOLHER PREFERÊNCIAS </h1>
+        <h1> ESCOLHER PREFERÊNCIAS </h1>
 
-            <p>Suas preferências aparecerão com mais frequência no seu feed</p>
+        <p>Suas preferências aparecerão com mais frequência no seu feed</p>
 
-            {% for gender in genders %}
-            <div>
-                <h1>{{gender}}</h1>
-                <img src="{{book_image}}" alt="">
-            </div>
-            {% endfor %}
+        {% for gender in genders %}
+        <div>
+            <h1>{{gender}}</h1>
+            <img src="{{book_image}}" alt="">
+        </div>
+        {% endfor %}
 
-            <button>Continuar</button>
-        </section>    
-    </main>
-    
+        <button>Continuar</button>    
+    </main>    
 </body>
 
 </html>

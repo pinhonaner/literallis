@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+{% include 'settings/partials/head.html'  %}
+
+<body>
+    {% include 'settings/partials/header.html' %}
+
+    <!-- Esse é o conteúdo da página de configurações. -->
+    <main> 
+        {% include 'settings/partials/settings_section_1.html' %}        
+
+        <section>
+            <div>
+                <h1>Nome:</h1>
+                <input type="text">
+            </div>
+
+            <div>
+                <h1>Email:</h1>
+                <input type="text">
+            </div>
+
+            <div>
+                <h1>Telefone:</h1>
+                <input type="text">
+            </div>
+
+            <div>
+                <h2>Tornar conta privada</h2>
+                <!-- slider dependente de js para confirmação de privação de conta-->
+                <label for="slider">Sim ou Não:</label>
+                <input type="range" min="0" max="1" step="1" value="0" id="slider">
+                <p id="result"></p>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
