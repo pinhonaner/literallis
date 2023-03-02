@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+{% include 'review/partials/head.html'  %}
+
+<body>
+    {% include 'review/partials/header.html' %}
+
+    <!-- Esse é o conteúdo da página 'resenha'. -->
+    
+    <img class="arrow_1" src='{% static "/home/img/arrow_1.svg" %}' alt="">
+    
+    <main> 
+        <img src="{{book_image}}" alt="">
+        <!-- seção dedicada à avaliação do livro-->
+        <div>
+            <h1>{{book_title}}</h1>
+            <p>Autor: {{book_author}}</p>
+            <p>Ano: {{book_year}}</p>
+        </div>
+        
+        <div>
+            <h1>Seu Progresso!</h1>
+            <!-- demonstrar com js ou backend a porcentagem do progresso e o número de páginas lidas/totais -->
+            <div class="progress-bar" ></div>
+        </div>
+
+        <div>
+            <h1>O que você está achando?</h1>
+            <input type="text">
+        </div>
+
+        <div>
+            <h1>Páginas lidas</h1>
+            <input type="text">
+        </div>
+            
+        <div>
+            <!-- slider dependente de js para confirmação de spoiler-->
+            <label for="slider">Sim ou Não:</label>
+            <input type="range" min="0" max="1" step="1" value="0" id="slider">
+            <p id="result"></p>
+        </div>
+
+        <div>
+            <button>Fazer anotações privadas</button>
+        </div>
+
+        <div>
+            <button>Finalizar leitura</button>
+        </div>
+    </main>
+
+    {% include 'review/partials/footer.html' %}
+</body>
+
+</html>
