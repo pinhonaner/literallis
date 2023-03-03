@@ -4,6 +4,7 @@ from django.shortcuts import render
 
 def profile_page(request):
     context = {
-        'profile_id': ...
+        'profile_id': ...,
+        'title': f'{"profile_id"} | Literallis',
     }
     return render(request, 'profiles/pages/profile.html', context)

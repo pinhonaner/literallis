@@ -5,5 +5,6 @@ from bookshelf import views
 app_name = 'bookshelf'
 
 urlpatterns = [
-    path('', views.bookshelf, name='bookshelf'),
+    path('prateleira/', views.bookshelf, name='bookshelf'),
+    path('', views.book, name='book' ),
 ]
