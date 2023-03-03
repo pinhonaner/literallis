@@ -6,4 +6,4 @@ def settings(request):
     context = {
 
     }
-    return render(request, 'settings/')
+    return render(request, 'settings/pages/settings.html')
