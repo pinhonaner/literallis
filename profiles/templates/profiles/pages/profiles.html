@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+{% include 'profiles/partials/head.html' %}
+
+<body>
+    {% include 'profiles/partials/header.html' %}
+
+    <!-- Esse é o conteúdo da página de perfil. -->
+    <section>
+        {% include 'profiles/partials/profiles_navbar.html' %}
+    </section>
+    <!-- Seção da timeline -->
+    <section id="timeline">
+        <h2>Linha do tempo</h2>
+        <article>
+            <h3>My First Post</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </article>
+        <article>
+            <h3>Meu segundo post</h3>
+            <p>Nulla ac ex eleifend, venenatis dolor eget, commodo enim.</p>
+        </article>
+    </section>
+    <!-- About section -->
+    <section id="about">
+        <h2>Sobre mim</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit diam eu ligula consectetur, vitae mollis
+            augue semper.</p>
+    </section>
+    <!-- Photos section -->
+    <section id="photos">
+        <h2>Fotos</h2>
+        <img src="{{photo1}}" alt="Photo 1" />
+        <img src="{{photo2}}" alt="Photo 2" />
+        <img src="{{photo3}}" alt="Photo 3" />
+    </section>
+    <!-- Seção de amigos -->
+    <section id="friends">
+        <h2>Amigos</h2>
+        <ul>
+            <li>{{friend_1}}</li>
+            <li>{{friend_2}}</li>
+            <li>{{friend_3}}</li>
+        </ul>
+    </section>
+    </main>
+    <!-- Sidebar com informações adicionais -->
+    <aside>
+        <h2>Pessoas que você talvez conheça</h2>
+        <ul>
+            <li>{{user_1}}</li>
+            <li>{{user_2}}</li>
+            <li>{{user_3}}</li>
+        </ul>
+    </aside>
+    <!-- Seção de seguidores -->
+    <section id="followers">
+        <h2>Seguidores</h2>
+        <ul>
+            <li>{{follower_1}}</li>
+            <li>{{follower_2}}</li>
+            <li>{{follower_3}}</li>
+        </ul>
+    </section>
+    <!-- Seção de pessoas que está seguindo -->
+    <section id="followers">
+        <h2>Seguidores</h2>
+        <ul>
+            <li>{{follower_1}}</li>
+            <li>{{follower_2}}</li>
+            <li>{{follower_3}}</li>
+        </ul>
+    </section>
+    <footer>
+        <p>&copy; {{actual_year}} {{user_name}}</p>
+        <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+        </ul>
+    </footer>
+    </main>
+</body>
+
+</html>

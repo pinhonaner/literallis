@@ -1,0 +1,20 @@
+<!-- pattern for profile page header -->
+{% load static %}
+<header>
+    <!--Research bar-->
+    <div id="divSearch">
+        <img src="search3.png" alt="Buscar no Litteralis..."/>
+        <input type="text" id="txtSearch" placeholder="Buscar..."/>
+        <button id="btnSearch">Buscar</button>
+    </div>    
+    <!-- Navigation bar -->
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#messages">Messages</a></li>
+        <li><a href="#notifications">Notifications</a></li>
+        <!-- User profile picture and name -->
+        <li><a href="#profile"><img src="{{profile-picture}}" alt="{{name}}" /></a></li>
+      </ul>
+    </nav>
+  </header>
