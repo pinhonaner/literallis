@@ -1,6 +1,6 @@
 from PIL import Image
 
-def resize_image(image_path, output_path, width=None, height=None):
+def resize_image(image_path, output_path, width=1280, height=640):
     with Image.open(image_path) as img:
         # Obter as dimensões atuais da imagem
         old_width, old_height = img.size
