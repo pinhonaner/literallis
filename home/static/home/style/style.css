@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Swistblnk';
-    src: url(Swistblnk\ Banthers.otf) format('opentype'), url(Swistblnk\ Banthers.ttf) format('truetype');
+    src: url("../fonts/Swistblnk\ Banthers.otf") format('opentype'), url("../fonts/Swistblnk\ Banthers.ttf") format('truetype');
 }
 
 * {
@@ -26,8 +26,8 @@ body {
     align-items: center;
     justify-content: center;
     gap: 850px;
-    padding: 15.5px 148px;
-    background: url(paper_background.svg);
+    padding: 16px 148px;
+    background: url("../img/paper_background.svg");
 }
 
 .header_image {
@@ -40,6 +40,11 @@ body {
     font-size: 20px;
 }
 
+.header_menu_it {    
+    text-decoration: none;
+    color: inherit;
+}
+
 .content {
     border-top: 1px solid #0000004D;
     justify-content: center;
@@ -50,7 +55,7 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background: url(paper_background.svg);
+    background: url("../img/paper_background.svg");
 }
 
 .main_content_nw {
@@ -72,15 +77,15 @@ body {
 }
 
 .main_content_button{
-    border:1px solid #5A5223;
+    border:2px solid #5A5223;
     border-radius:20px;
     background-color: #5A5223;
     display:inline-block;
     cursor:pointer;
-    font-family: 'Times New Roman', Times, serif;
-    font-size:18px;
+    font-family: "Swistblnk", Times, Serif;
+    font-size:20px;
     color: #FFFFFF;
-    padding:11px 22px;
+    padding:6px 19px 14px 22px;
     text-decoration:none;
     }
 
@@ -141,7 +146,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 175px 0px 100px 0px;
-    background: url(background_paper_40.svg);
+    background: url("../img/background_paper_40.svg");
     background-color: rgba(162, 84, 48, 1);
 }
 
@@ -185,7 +190,7 @@ body {
     font-size: 25px;
     text-align: center;
     color: #A25430;
-    padding: 25px 0px 40px;
+    padding: 25px 0px 45px;
 }
 
 .first_box_text {
@@ -214,7 +219,7 @@ body {
     font-size: 25px;
     text-align: center;
     color: #A25430;
-    padding: 25px 0px 40px;
+    padding: 25px 0px 10px;
 }
 
 .second_box_text {
@@ -243,7 +248,7 @@ body {
     font-size: 25px;
     text-align: center;
     color: #A25430;
-    padding: 25px 0px 10px;
+    padding: 25px 0px 15px;
 }
 
 .third_box_text {
