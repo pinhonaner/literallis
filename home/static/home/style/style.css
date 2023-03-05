@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Newsreader:opsz@6..72&display=swap');
+@font-face {
+    font-family: 'Swistblnk';
+    src: url(Swistblnk\ Banthers.otf) format('opentype'), url(Swistblnk\ Banthers.ttf) format('truetype');
+}
 
 * {
     margin: 0;
@@ -8,33 +11,45 @@
 }
 
 body {
-    font-size: 100%;
+    font-family: 'Swistblnk', Serif;
+    grid-template-areas: 
+    "header header"
+    "main_content main_content"
+    "second_content second_content";
+    align-items: center;
 }
 
 .header {
+    grid: header;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    padding: 24px 148px;
-    background: url(paper_background.svg)
+    justify-content: center;
+    gap: 850px;
+    padding: 15.5px 148px;
+    background: url(paper_background.svg);
+}
+
+.header_image {
+    width: 60px;
 }
 
 .header_menu {
     display: flex;
     gap: 124px;
+    font-size: 20px;
 }
 
 .content {
     border-top: 1px solid #0000004D;
-    width: auto;
+    justify-content: center;
 }
 
 .main_content {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     background: url(paper_background.svg);
 }
 
@@ -42,17 +57,18 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 289px 650px 259px 250px;
+    padding: 231px 650px 231px 250px;
     gap: 50px;
 }
 
 .main_content_text {
-    font-size: 48px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 38px;
     text-align: center;
 }
 
 .main_content_logotipo {
-    block-size: 122px;
+    block-size: 112px;
 }
 
 .main_content_button{
@@ -64,69 +80,85 @@ body {
     font-family: 'Times New Roman', Times, serif;
     font-size:18px;
     color: #FFFFFF;
-    padding:14px 25px;
+    padding:11px 22px;
     text-decoration:none;
     }
 
 .main_content_ne {
+    position: relative;
     display: flex;
+    align-items: center;
+    top: 60px;
 }
 
 .main_content_marker {
     position: absolute;
-    block-size: 436px;
-    top: 799px;
+    top: 219px;
     right: 233px;
+    max-width: 135px;
 }
 
 .main_content_std_elipse_2 {
     position: absolute;
-    block-size: 242px;
-    top: 678px;
-    right: 30px;
+    top: 88px;
+    right: 40px;
+    max-width: 220px;
 }
 
 .main_content_std_elipse_1 {
     position: absolute;
-    block-size: 242px;
-    top: 216px;
+    top: -356px;
     right: 328px;
+    max-width: 220px;
 }
 
 .main_content_image_2 {
     position: absolute;
-    block-size: 310px;
-    top: 528px;
+    top: -50px;
     right: 154px;
+    max-width: 290px;
 }
 
 .main_content_image_1 {
     position: absolute;
     block-size: 279px;
-    top: 278px;
+    top: -286px;
     right: 170px;
+    max-width: 259px;
 }
 
 .main_content_marker_text {
-    font-size: 37px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 33px;
     position: absolute;
-    top: 838px;
-    right: 295px;
+    top: 252px;
+    right: 288px;
     color: #FFFFFF;
 }
 
 .second_content {
+    grid: second_content;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     padding: 175px 0px 100px 0px;
-    background: url(paper_background.svg);
-    background-color: #A25430;
+    background: url(background_paper_40.svg);
+    background-color: rgba(162, 84, 48, 1);
+}
+
+.div_second_content_title {
+    position: relative;
+    color: #FFF;
+    display: flex;
+    font-size: 54px;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;    
 }
 
 .second_content_title {
-    font-size: 36px;
-    padding: 25px;
-    margin-left: 285px;
+    position: relative;
+    left: -300px;
+    padding-bottom: 10px;
 }
 
 .second_content_boxes {
@@ -135,6 +167,8 @@ body {
     padding: 50px 0px;
     gap: 75px;
     justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
 }
 
 .first_box {
@@ -146,6 +180,8 @@ body {
 }
 
 .first_box_title {
+    font-family: 'Swistblnk', Serif;
+    font-style: normal;
     font-size: 25px;
     text-align: center;
     color: #A25430;
@@ -173,6 +209,8 @@ body {
 }
 
 .second_box_title {
+    font-family: 'Swistblnk', Serif;
+    font-style: normal;
     font-size: 25px;
     text-align: center;
     color: #A25430;
@@ -200,6 +238,8 @@ body {
 }
 
 .third_box_title {
+    font-family: 'Swistblnk', Serif;
+    font-style: normal;
     font-size: 25px;
     text-align: center;
     color: #A25430;
@@ -227,6 +267,8 @@ body {
 }
 
 .fourth_box_title {
+    font-family: 'Swistblnk', Serif;
+    font-style: normal;
     font-size: 25px;
     text-align: center;
     color: #A25430;
@@ -253,6 +295,7 @@ body {
 }
 
 .footer_text {
+    font-family: 'Times New Roman', Times, serif;
     font-size: 23px;
     color: #FEFEFE;
     position: absolute;
