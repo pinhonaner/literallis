@@ -1,86 +1,59 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-BR">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <meta name="description"
-        content="O lugar ideal para você organizar e compartilhar todas suas experiências de leituras">
-    <title>Literalis</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
+{% include 'home/partials/head.html'  %}
 
 <body>
-    <!-- header compound by logo and navigation menu-->
-    <header class="header">
-            <img class="header_image" src="small_logo.svg" alt="Logo da Literalis">
-            <nav class="header_menu">
-                <a class="header_menu_item">SOBRE NÓS</a>
-                <a class="header_menu_item">LOGIN</a>
-            </nav>
-    </header>
-    <!-- first section of the page-->
+    {% include 'home/partials/header.html' %}
+
+
+    <!-- Esse é o conteúdo da landing page. -->
     <main class="content">
         <section class="main_content">
             <div class="main_content_nw">
-                <h2 class="main_content_text">Organize e compartilhe todas suas <br> experiências de leituras</h2>
-                <img class="main_content_logotipo" src="logotipo.svg" alt="Logotipo da Literalis">
+                <h2 class="main_content_text">Organize e compartilhe todas suas experiências de leituras</h2>
+                <img class="main_content_logotipo"src='{% static "/home/img/logotipo.svg" %}' alt="Logotipo da Literalis">
                 <button class="main_content_button">Criar conta</button>
             </div>
             <div class="main_content_ne">
-                <img class="main_content_marker" src="marker.svg" alt="">
-                <img class="main_content_std_elipse_1" src="standard_elipse.svg" alt="">
-                <img class="main_content_std_elipse_2" src="standard_elipse.svg" alt="">
-                <img class="main_content_image_2" src="elipse_image_2.svg" alt="">
-                <img class="main_content_image_1" src="elipse_image_1.svg" alt="">
+                <img class="main_content_marker" src='{% static "/home/img/marker.svg" %}' alt="">
+                <img class="main_content_std_elipse_1" src='{% static "/home/img/standard_elipse.svg" %}' alt="">
+                <img class="main_content_std_elipse_2" src='{% static "/home/img/standard_elipse.svg" %}' alt="">
+                <img class="main_content_image_2" src='{% static "/home/img/elipse_image_2.svg" %}' alt="">
+                <img class="main_content_image_1" src='{% static "/home/img/elipse_image_1.svg" %}' alt="">
                 <p class="main_content_marker_text">C<br>O<br>N<br>H<br>E<br>Ç<br>A</p>
-            </div>
+            </div>     
         </section>
         <!--second section of the page-->
         <section class="second_content">
-            <div class="second_content_background"></div>
-            <div class="div_second_content_title">
-                <p class="second_content_title">Recursos do Litteralis</p><br>
-            </div>
-
-            <div class="second_content_boxes">
+            <h2 class="second_content_title">Recursos do Literalis</h2>
                 <div class="first_box">
-                    <h3 class="first_box_title">Compartilhar <br> leitura</h3>
-                    <p class="first_box_text">Deixe o mundo <br> saber sua opinião <br> sobre sua leitura e <br> veja o
-                        que seus <br> amigos andam <br> lendo</p>
-                    <img class="first_box_rectangle" src="menu_rectangle.svg" alt="">
+                    <h3 class="first_box_title">Compartilhar leitura</h3>
+                    <img class="menu_rectangle" src='{% static "/home/img/menu_rectangle.svg"%}' alt="">
+                    <p class="first_box_text">Deixe o mundo saber sua opinião sobre sua leitura  e veja o que seus amigos andam lendo</p>
                 </div>
-
                 <div class="second_box">
-                    <h3 class="second_box_title">Anotações <br> privadas</h3>
-                    <p class="second_box_text">Não deseja <br> compartilhar aquele <br> detalhe importante? <br> Sem
-                        problemas, você <br> pode usar seu <br> caderno para fazer <br> anotações privadas</p>
-                    <img class="second_box_rectangle" src="menu_rectangle.svg" alt="">
+                    <h3 class="second_box_title">Anotações privadas</h3>
+                    <img src='{% static "/home/img/menu_rectangle.svg" %}' alt="">
+                    <p class="second_box_text">Não deseja compartilhar aquele detalhe importante? Sem problemas, você pode usar seu caderno para fazer anotações privadas</p>
                 </div>
-
                 <div class="third_box">
-                    <h3 class="third_box_title">Visualize todos <br> seus livros <br> lidos</h3>
-                    <p class="third_box_text">Crie categorias e <br> organize sua <br> prateleira como <br> desejar.
-                        Você também <br> pode escolher se seus <br> livros serão públicos ou não</p>
-                    <img class="third_box_rectangle" src="menu_rectangle.svg" alt="">
+                    <h3 class="third_box_title">Visualize todos seus livros lidos</h3>
+                    <img src='{% static "/home/img/menu_rectangle.svg"%}' alt="">
+                    <p class="third_box_text">Crie categorias e organize sua prateleira como desejar. Você também pode escolher se seus livros serão públicos ou não</p>
                 </div>
-
                 <div class="fourth_box">
-                    <h3 class="fourth_box_title">Temporizador <br> de foco</h3>
-                    <p class="fourth_box_text">Quando acionado, o <br> temporizador <br> congela sua tela para <br>
-                        evitar distrações e <br> assim você controla <br> os dias em que se <br> manteve focado na
-                        leitura</p>
-                    <img class="fourth_box_rectangle" src="menu_rectangle.svg" alt="">
+                    <h3 class="fourth_box_title">Temporizador de foco</h3>
+                    <img src='{% static "/home/img/menu_rectangle.svg"%}' alt="">
+                    <p class="fourth_box_text">Quando acionado, o temporizador congela sua tela para evitar distrações e assim você controla os dias em que se manteve focado na leitura</p>
                 </div>
-
-            </div>
-            <div class="likeafooter">
-                <p class="footer_text">E muito mais!</p>
-                <img src="menu_rectangle.svg" alt="">
-            </div>
+                <div class="likeafooter">
+                    <img src="/home/img/menu_rectangle.svg" alt="">
+                    <p class="footer_text">E muito mais!</p>
+                </div> 
         </section>
-    </main>
-
+     </main>
 </body>
 
 </html>
